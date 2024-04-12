@@ -3,6 +3,7 @@
 #include <stdlib.h>
 
 #include "execution/choose/choose.h"
+#include "preprocess/newlines.h"
 
 void read(char i[], char b[], int number){
   FILE *file = fopen(b, "r");
@@ -55,9 +56,11 @@ int main(int argc, char *argv[]) {//printf("bonjour");
   int number = 0;
   
   read(content, argv[1], number);
-  printf("%s a\n", content);
+  //printf("%s a\n", content);
+  
 
   char *lines[100];
+
 
   int num = list_line(content, lines) - 1;
 
@@ -65,7 +68,7 @@ int main(int argc, char *argv[]) {//printf("bonjour");
     char a[100];
     strcpy(a, " ");
     strcat(a, lines[i]);
-    printf("a : %s\n", a);
+    new_lines(a);
     choose(a);
   }
 

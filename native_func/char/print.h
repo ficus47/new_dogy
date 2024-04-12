@@ -6,10 +6,10 @@
 #define print1
 
 int print(char *args[], int n_arg){
-    printf("%d\n", n_arg+1);
-    for (int i = 0; i <= n_arg+1; i++){
-        printf("%s", args[i]);
+    for (int i = 0; i < n_arg; i++){
+        printf("%s ", args[i]);
     }
+    printf("\n");
     return 0;
 
 }

@@ -14,7 +14,6 @@
 
 
 int choose(char func[]){
-    printf("func : %s\n", func);
     if (is_func(func) == 0){
         char *arg;
         arg = extract_between_characters(func, '(', ')');
@@ -22,9 +21,9 @@ int choose(char func[]){
         char *command;
         command = extract_between_characters(func, ' ', '(');
 
-        printf("\nargument : %s fonction : %s\n", arg, command);
+        //printf("\nargument : %s fonction : %s\n", arg, command);
 
-        char *arg_list[50];
+        char *arg_list[20];
         int n_arg = list_arg(arg, arg_list);
 
         evaluate(arg_list, command, n_arg);
